@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey</title>
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+  <div class="container">
+  <h2 class="heading_top">Colmplete the survey</h2>
+  <form action="connect.php" method="post">
+
+    <div class="gender-box box">
+      <h3 class="inputs-heading">1) Select your gender: </h3>
+      <div class="box_inner">
+        <div class="radio_wrapper">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female"required>
+        </div>
+      </div>
+    </div>
+
+    <div class="age-box box">
+      <h3 class="inputs-heading">2) Specify your age: </h3>
+      <div class="box_inner">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+      </div>
+    </div>
+    
+    <div class="job_position-box box">
+      <h3 class="inputs-heading">3) What is your current Job position: </h3>
+      <div class="box_inner many-items">
+        <div class="radio_wrapper">
+          <label for="full-time">Full-time</label>
+          <input type="radio" name="job_position" id="full-time" value="full-time" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="part-time">Part-time</label>
+          <input type="radio" name="job_position" id="part-time" value="part-time" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="unemployed">Unemployed</label>
+          <input type="radio" name="job_position" id="unemployed" value="unemployed" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="degree_of_study-box box">
+      <h3 class="inputs-heading">4) Currently enrolled degree of study: </h3>
+      <div class="box_inner many-items">       
+        <div class="radio_wrapper">
+          <label for="bachelors_degree">Bachelor's degree</label>
+          <input type="radio" name="degree_of_study" id="bachelors_degree" value="bachelors_degree" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="masters_degree">Master's degree</label>
+          <input type="radio" name="degree_of_study" id="masters_degree" value="masters_degree" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="phd">PhD</label>
+          <input type="radio" name="degree_of_study" id="phd" value="phd" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="field_of_study-box box">
+      <h3 class="inputs-heading">5) Field of study: </h3>
+      <div class="box_inner">
+          <label for="exact_sciences">Faculty of Exact Sciences</label>
+          <input type="radio" name="field_of_study" id="exact_sciences" value="exact_sciences" required>
+          <label for="natural_sciences">Faculty of Natural Sciences</label>
+          <input type="radio" name="field_of_study" id="natural_sciences" value="natural_sciences">
+          <label for="history_and_languages">Faculty of History and Languages</label>
+          <input type="radio" name="field_of_study" id="history_and_languages" value="history_and_languages" required> 
+          <label for="pedagogy">Faculty of Pedagogy</label>
+          <input type="radio" name="field_of_study" id="pedagogy" value="pedagogy" required>
+          <label for="preschool_and_primary_education">Faculty of Preschool and Primary Education</label>
+          <input type="radio" name="field_of_study" id="preschool_and_primary_education" value="preschool_and_primary_education">
+          <label for="sports_and_pre-conscription_military_education">Faculty of Sports and Pre-conscription military education</label>
+          <input type="radio" name="field_of_study" id="sports_and_pre-conscription_military_education" value="sports_and_pre-conscription_military_education" required>
+      </div>
+    </div>
+
+    <div class="bank_account-box box">
+      <h3 class="inputs-heading">6) Do you have a bank account? </h3>
+      <div class="box_inner">
+        <div class="radio_wrapper">
+          <label for="b_account-yes">Yes</label>
+          <input type="radio" name="bank_account" id="b_account-yes" value="yes" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="b_account-no">No</label>
+          <input type="radio" name="bank_account" id="b_account-no" value="no" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile_banking-box box">
+      <h3 class="inputs-heading">7) Do you use internet (mobile) banking? </h3>
+      <div class="box_inner">
+        <div class="radio_wrapper">
+          <label for="mob_banking-yes">Yes</label>
+          <input type="radio" name="mobile_banking" id="mob_banking-yes" value="yes" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="mob_banking-no">No</label>
+          <input type="radio" name="mobile_banking" id="mob_banking-no" value="no" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="how_long_using_bank_account-box box">
+      <h3 class="inputs-heading">8) How long have you been using your bank account?</h3>
+      <div class="box_inner many-items">
+        <div class="radio_wrapper">
+          <label for="less_than_1_year">Less than 1 year</label>
+          <input type="radio" name="how_long_using_bank_account" id="less_than_1_year" value="less_than_1_year" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="1_to_2_years">1 to 2 years</label>
+          <input type="radio" name="how_long_using_bank_account" id="1_to_2_years" value="1_to_2_years" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="3_to_4_years">3 to 4 years</label>
+          <input type="radio" name="how_long_using_bank_account" id="3_to_4_years" value="3_to_4_years" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="more_than_4_years">More than 4 years</label>
+          <input type="radio" name="how_long_using_bank_account" id="more_than_4_years" value="more_than_4_years" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="how_frequently _using_bank_account-box box">
+      <h3 class="inputs-heading">9) How frequently do you use your bank account?</h3>
+      <div class="box_inner many-items">
+        <div class="radio_wrapper">
+          <label for="how_frequently-never">Never</label>
+          <input type="radio" name="how_frequently_using_bank_account" id="how_frequently-never" value="never" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="how_frequently-seldom">Seldom</label>
+          <input type="radio" name="how_frequently_using_bank_account" id="how_frequently-seldom" value="seldom" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="how_frequently-sometimes">Sometimes</label>
+          <input type="radio" name="how_frequently_using_bank_account" id="how_frequently-sometimes" value="sometimes" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="how_frequently-often">Often</label>
+          <input type="radio" name="how_frequently_using_bank_account" id="how_frequently-often" value="often" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="how_frequently-always">Always</label>
+          <input type="radio" name="how_frequently_using_bank_account" id="how_frequently-always" value="always" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="banking_system_trust-box box">
+      <h3 class="inputs-heading">10) I trust the banking system of my country</h3>
+      <div class="box_inner many-items">
+        <div class="radio_wrapper">
+          <label for="banking_system_trust-never">Never</label>
+          <input type="radio" name="banking_system_trust" id="banking_system_trust-never" value="never" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="banking_system_trust-rarely">Rarely</label>
+          <input type="radio" name="banking_system_trust" id="banking_system_trust-rarely" value="rarely" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="banking_system_trust-sometimes">Sometimes</label>
+          <input type="radio" name="banking_system_trust" id="banking_system_trust-sometimes" value="sometimes" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="banking_system_trust-very_often">Very often</label>
+          <input type="radio" name="banking_system_trust" id="banking_system_trust-very_often" value="very_often" required>
+        </div>
+        <div class="radio_wrapper">
+          <label for="banking_system_trust-always">Always</label>
+          <input type="radio" name="banking_system_trust" id="banking_system_trust-always" value="always" required>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="liker_scales-box">
+      <h3 class="inputs-heading">To what extent do you agree with the following 32 statements? <small class="small-heading">(These statements have Likert scales)</small> </h3>
+      <div class="likert-scales">
+        <div class="scale-1 scale">
+          <span class="scale-top">1</span>
+          <span class="scale-bottom">Strongly<br>disagree</span>
+        </div>
+        <div class="scale-2 scale">
+          <span class="scale-top">2</span>
+          <span class="scale-bottom">Disagree</span>
+        </div>
+        <div class="scale-3 scale">
+          <span class="scale-top">3</span>
+          <span class="scale-bottom">Neither agree<br>nor disagree</span>
+        </div>
+        <div class="scale-4 scale">
+          <span class="scale-top">4</span>
+          <span class="scale-bottom">Agree</span>
+        </div>
+        <div class="scale-5 scale">
+          <span class="scale-top">5</span>
+          <span class="scale-bottom">Strongly<br>agree</span>
+        </div>
+      </div>
+      <table class="liker_scales-table">
+        <tr class="table-row">
+          <th class="table-heading table-heading--empty"></th>
+          <th class="table-heading table-heading--empty"></th>
+          <th class="table-heading table-heading--numb">1</th>
+          <th class="table-heading table-heading--numb">2</th>
+          <th class="table-heading table-heading--numb">3</th>
+          <th class="table-heading table-heading--numb">4</th>
+          <th class="table-heading table-heading--numb">5</th>
+        </tr>
+        <tr class="table-row box table-row-top">
+          <td class="table-data">1</td>
+          <td class="table-data"><label for="my_bank_knows_exactly_what_is_happening_in_the_market">My bank knows exactly what is happening in the market.</label></td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_knows_exactly_what_is_happening_in_the_market" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_knows_exactly_what_is_happening_in_the_market" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_knows_exactly_what_is_happening_in_the_market" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_knows_exactly_what_is_happening_in_the_market" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_knows_exactly_what_is_happening_in_the_market" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">2</td>
+          <td class="table-data">My bank knows its clients and their financial needs.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_knows_its_clients_and_their_financial_needs" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_knows_its_clients_and_their_financial_needs" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_knows_its_clients_and_their_financial_needs" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_knows_its_clients_and_their_financial_needs" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_knows_its_clients_and_their_financial_needs" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">3</td>
+          <td class="table-data">My bank selects the rights products for clients.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_selects_the_rights_products_for_clients" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_selects_the_rights_products_for_clients" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_selects_the_rights_products_for_clients" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_selects_the_rights_products_for_clients" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_selects_the_rights_products_for_clients" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">4</td>
+          <td class="table-data">My bank is competent.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_competent" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_competent" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_competent" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_competent" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_competent" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">5</td>
+          <td class="table-data">My bank is there for clients when they need X.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_there_for_clients_when_they_need_x" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_there_for_clients_when_they_need_x" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_there_for_clients_when_they_need_x" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_there_for_clients_when_they_need_x" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_there_for_clients_when_they_need_x" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">6</td>
+          <td class="table-data">My bank will not go bankrupt.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_will_not_go_bankrupt" value="1" required required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_will_not_go_bankrupt" value="2" required required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_will_not_go_bankrupt" value="3" required required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_will_not_go_bankrupt" value="4" required required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_will_not_go_bankrupt" value="5" required required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">7</td>
+          <td class="table-data">My bank is financially solid.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_financially_solid" value="1" required required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_financially_solid" value="2" required required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_financially_solid" value="3" required required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_financially_solid" value="4" required required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_financially_solid" value="5" required required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">8</td>
+          <td class="table-data">My bank is large and strong.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_large_and_strong" value="1" required required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_large_and_strong" value="2" required required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_large_and_strong" value="3" required required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_large_and_strong" value="4" required required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_large_and_strong" value="5" required required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">9</td>
+          <td class="table-data">My bank does not stay away when clients have problems.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_does_not_stay_away_when_clients_have_problems" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_does_not_stay_away_when_clients_have_problems" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_does_not_stay_away_when_clients_have_problems" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_does_not_stay_away_when_clients_have_problems" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_does_not_stay_away_when_clients_have_problems" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">10</td>
+          <td class="table-data">My bank treats clients in a fair manner.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_treats_clients_in_a_fair_manner" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_treats_clients_in_a_fair_manner" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_treats_clients_in_a_fair_manner" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_treats_clients_in_a_fair_manner" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_treats_clients_in_a_fair_manner" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">11</td>
+          <td class="table-data">My bank abides by the law and regulations.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_abides_by_the_law_and_regulations" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_abides_by_the_law_and_regulations" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_abides_by_the_law_and_regulations" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_abides_by_the_law_and_regulations" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_abides_by_the_law_and_regulations" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">12</td>
+          <td class="table-data">My bank has integrity.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_has_integrity" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_has_integrity" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_has_integrity" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_has_integrity" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_has_integrity" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">13</td>
+          <td class="table-data">My bank responses quickly to questions asked by clients.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_responses_quickly_to_questions_asked_by_clients" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_responses_quickly_to_questions_asked_by_clients" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_responses_quickly_to_questions_asked_by_clients" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_responses_quickly_to_questions_asked_by_clients" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_responses_quickly_to_questions_asked_by_clients" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">14</td>
+          <td class="table-data">My bank warns clients for wrong decisions.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_warns_clients_for_wrong_decisions" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_warns_clients_for_wrong_decisions" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_warns_clients_for_wrong_decisions" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_warns_clients_for_wrong_decisions" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_warns_clients_for_wrong_decisions" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">15</td>
+          <td class="table-data">My bank puts the interest of the customer first.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_puts_the_interest_of_the_customer_first" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_puts_the_interest_of_the_customer_first" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_puts_the_interest_of_the_customer_first" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_puts_the_interest_of_the_customer_first" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_puts_the_interest_of_the_customer_first" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">16</td>
+          <td class="table-data">My bank fulfils clients’ expectations.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_fulfils_clients_expectations" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_fulfils_clients_expectations" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_fulfils_clients_expectations" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_fulfils_clients_expectations" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_fulfils_clients_expectations" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">17</td>
+          <td class="table-data">My bank is open about costs and risks of products and services.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_open_about_costs_and_risks_of_products_and_services" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_open_about_costs_and_risks_of_products_and_services" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_open_about_costs_and_risks_of_products_and_services" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_open_about_costs_and_risks_of_products_and_services" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_open_about_costs_and_risks_of_products_and_services" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">18</td>
+          <td class="table-data">My bank is open about procedures.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_open_about_procedures" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_open_about_procedures" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_open_about_procedures" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_open_about_procedures" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_open_about_procedures" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">19</td>
+          <td class="table-data">My bank communicates clearly.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_communicates_clearly" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_communicates_clearly" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_communicates_clearly" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_communicates_clearly" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_communicates_clearly" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">20</td>
+          <td class="table-data">My bank is transparent.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_transparent" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_transparent" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_transparent" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_transparent" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_transparent" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">21</td>
+          <td class="table-data">My bank is involved with society.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_involved_with_society" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_involved_with_society" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_involved_with_society" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_involved_with_society" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_involved_with_society" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">22</td>
+          <td class="table-data">My bank is involved in local activities.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_involved_in_local_activities" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_involved_in_local_activities" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_involved_in_local_activities" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_involved_in_local_activities" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_involved_in_local_activities" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">23</td>
+          <td class="table-data">My bank is active in the field of sponsorship such as sports or culture.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_active_in_the_field_of_sponsorship_such_as_sports_or" value="1" required required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_active_in_the_field_of_sponsorship_such_as_sports_or" value="2" required required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_active_in_the_field_of_sponsorship_such_as_sports_or" value="3" required required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_active_in_the_field_of_sponsorship_such_as_sports_or" value="4" required required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_active_in_the_field_of_sponsorship_such_as_sports_or" value="5" required required></td>
+        </tr>
+        <tr class="table-row table-row-bottom">
+          <td class="table-data">24</td>
+          <td class="table-data">My bank contributes to a sustainable society.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_contributes_to_a_sustainable_society" value="1" required required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_contributes_to_a_sustainable_society" value="2" required required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_contributes_to_a_sustainable_society" value="3" required required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_contributes_to_a_sustainable_society" value="4" required required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_contributes_to_a_sustainable_society" value="5" required required></td>
+        </tr>
+        <tr class="table-row">
+          <th class="table-heading table-heading" colspan="6">Trust</th>
+        </tr>
+        <tr class="table-row table-row-top">
+          <td class="table-data">1</td>
+          <td class="table-data">My bank is always trustworthy.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_is_always_trustworthy" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_is_always_trustworthy" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_is_always_trustworthy" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_is_always_trustworthy" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_is_always_trustworthy" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">2</td>
+          <td class="table-data">My banks’ words and promises are reliable.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="my_bank_words_and_promises_are_reliable" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="my_bank_words_and_promises_are_reliable" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="my_bank_words_and_promises_are_reliable" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="my_bank_words_and_promises_are_reliable" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="my_bank_words_and_promises_are_reliable" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">3</td>
+          <td class="table-data">I have trust in employees of my bank.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_have_trust_in_employees_of_my_bank" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_have_trust_in_employees_of_my_bank" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_have_trust_in_employees_of_my_bank" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_have_trust_in_employees_of_my_bank" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_have_trust_in_employees_of_my_bank" value="5" required></td>
+        </tr>
+        <tr class="table-row table-row-bottom">
+          <td class="table-data">4</td>
+          <td class="table-data">I have trust in my bank’s services.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_have_trust_in_my_banks_services" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_have_trust_in_my_banks_services" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_have_trust_in_my_banks_services" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_have_trust_in_my_banks_services" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_have_trust_in_my_banks_services" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <th class="table-heading table-heading" colspan="6">Loyalty</th>
+        </tr>
+        <tr class="table-row table-row-top">
+          <td class="table-data">5</td>
+          <td class="table-data">I plan on working with this bank also in future.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_plan_on_working_with_this_bank_also_in_future" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_plan_on_working_with_this_bank_also_in_future" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_plan_on_working_with_this_bank_also_in_future" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_plan_on_working_with_this_bank_also_in_future" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_plan_on_working_with_this_bank_also_in_future" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">6</td>
+          <td class="table-data">I would recommend this bank to my colleagues and friends.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_would_recommend_this_bank_to_my_colleagues_and_friends" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_would_recommend_this_bank_to_my_colleagues_and_friends" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_would_recommend_this_bank_to_my_colleagues_and_friends" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_would_recommend_this_bank_to_my_colleagues_and_friends" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_would_recommend_this_bank_to_my_colleagues_and_friends" value="5" required></td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">7</td>
+          <td class="table-data">I feel loyal to this bank.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_feel_loyal_to_this_bank" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_feel_loyal_to_this_bank" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_feel_loyal_to_this_bank" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_feel_loyal_to_this_bank" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_feel_loyal_to_this_bank" value="5" required></td>
+        </tr>
+        <tr class="table-row table-row-bottom">
+          <td class="table-data">8</td>
+          <td class="table-data">I feel a commitment to continuing a relationship with this bank.</td>
+          <td class="table-data data-input"><span>1</span><input type="radio" name="i_feel_a_commitment_to_continuing_a_relationship_with_this_bank" value="1" required></td>
+          <td class="table-data data-input"><span>2</span><input type="radio" name="i_feel_a_commitment_to_continuing_a_relationship_with_this_bank" value="2" required></td>
+          <td class="table-data data-input"><span>3</span><input type="radio" name="i_feel_a_commitment_to_continuing_a_relationship_with_this_bank" value="3" required></td>
+          <td class="table-data data-input"><span>4</span><input type="radio" name="i_feel_a_commitment_to_continuing_a_relationship_with_this_bank" value="4" required></td>
+          <td class="table-data data-input"><span>5</span><input type="radio" name="i_feel_a_commitment_to_continuing_a_relationship_with_this_bank" value="5" required></td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="submit_btn-wrapper">
+      <button class="submit" type="submit" id="submit_btn" name="submit">Submit</button>
+    </div>
+  </form>
+</div>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
